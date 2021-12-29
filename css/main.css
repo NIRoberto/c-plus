@@ -53,14 +53,13 @@
 body {
   background-color: var(--theme-1-bg-main);
 }
-/* .b1{
+.b1{
     background-color: var(--theme-2-bg-main);
 
 }
-.b2{
-    background-color: var(--theme-1-bg-main);
-
-} */
+.b2 {
+  background-color: var(--theme-3-bg-main);
+}
 .push {
   margin-bottom: 30px;
 }
@@ -72,11 +71,6 @@ body {
   margin: auto;
   border-radius: 3px;
 }
-.main1 {
-}
-.main2 {
-}
-
 header {
   display: grid;
   grid-template-columns: 70% 1fr;
@@ -86,12 +80,12 @@ header {
   justify-content: center;
   padding: 5px;
 }
-/* header span{
- color: var(--txt-theme-2-white-color)  !important;
+header span {
+  /* color: var(--txt-theme-2-white-color)  !important; */
 }
-.h2{
-
-} */
+header span {
+  color: var(--txt-theme-3-color);
+}
 span {
   font-size: small;
 }
@@ -113,13 +107,21 @@ span {
 .num {
   grid-area: 1/2/2/-1;
   text-align: center;
+  cursor: pointer;
+}
+ .t1{
+  color:  white;
+} .t2{
+  color: black;
+} .t3{
+  color: hsl(52, 100%, 62%);
 }
 .num span {
   padding-right: 4px;
 }
 .move {
   grid-area: 2/2/-1/-1;
-  margin-left: 2px;
+  margin-left: 5px;
   margin-top: 5px;
   background-color: grey;
   width: 40px;
@@ -127,31 +129,54 @@ span {
   border-radius: 5px;
   cursor: pointer;
 }
+.move1 {
+  background-color: var(--theme-1-bg-screen);
+}
+.move2 {
+  background-color: var(--theme-2-bg-screen);
+}.move3 {
+  background-color: var(--theme-3-bg-screen);
+}
 .move::after {
   content: "";
-  background-color: yellow;
   border-radius: 50%;
   width: 10px;
-  /* align-items: flex-end;
- */
   cursor: pointer;
-  margin-left: 16px;
   margin-top: 2px;
   display: flex;
   height: 10px;
   z-index: 5;
 }
-
+.move1::after {
+   background-color: var(--keys-theme-1-red-color);
+  margin-left: 0px;
+}
+.move2::after {
+  background-color: var(--keys-theme-2-dark-orange-color);
+  margin-left: 16px;
+}
+.move3::after {
+  background-color: var(--keys-theme-3-soft-color);
+  margin-left: 28px;
+ 
+}
 .main div input {
   width: 100%;
   border: none;
   margin: 25px 0px;
   outline: none;
   height: 100px;
+  text-align: right;
+  font-size: 1.5m;
   border-radius: 10px;
 }
 .main div .input-1 {
-  background-color: var(--theme-1-bg-toggle);
+  background-color: var(--theme-1-bg-screen);
+}
+.main div .input-2 {
+  background-color: var(--theme-2-bg-screen);
+}.main div .input-3 {
+  background-color: var(--theme-3-bg-screen);
 }
 .btns {
   display: grid;
@@ -164,24 +189,35 @@ span {
 }
 
 .btns button {
-    outline: none;
-    border: none;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 6px 9px;
-    font-size: var(--number-size);
+  outline: none;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 6px 9px;
+  font-size: var(--number-size);
+}
+.btn1  {
+  background-color: var(--theme-1-bg-toggle);
+}
+.btn2  {
+    background-color: var(--theme-2-bg-toggle);
+}
+.btn3  {
+  background-color: var(  --theme-3-bg-toggle);
+  
 }
 
 .btn1 button {
-box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);
-    
+  background-color: var(--keys-theme-2-light-grayshi-color);
+  box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);
 }
 .btn2 button {
-box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);
-    
+    background-color: var(--keys-theme-2-light-grayshi-color);
+  box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);
 }
 .btn3 button {
-box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);  
+  color: hsl(52, 100%, 62%);
+  background-color: var(--keys-theme-3-very-color);
 }
 .btns .reset {
   grid-area: 5/1/6/3;
@@ -190,39 +226,38 @@ box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);
   background-color: var(--keys-theme-3-vivid-color);
 }
 
-.btns .equal {
-  grid-area: 5/3/6/-1;
-  font-size: large;
-  padding: 14px 20px;
+.btns .r1,
+.d1 {
+  background-color: var(--keys-theme-1-dark-Desaturated-color) !important;
+  color: white !important;
 }
-.btns .reset1 {
-  grid-area: 5/1/6/3;
-  font-size: large;
-  padding: 14px 20px;
-  background-color: var(--theme-1-bg-main) !important;
-  color: var(--txt-theme-1-white-color) !important;
+.btns .r2,
+.d2 {
+  background-color: var(--keys-theme-2-dark-cyne-color) !important;
+  color: White !important;
+}
+.btns .r3,
+.d3 {
+  background-color: var(--keys-theme-3-dark-violet-color) !important;
+  color: white !important;
+  box-shadow: 0px 8px 15px var(--keys-theme-3-vivid-color);
 }
 
 .btns .equal {
   grid-area: 5/3/6/-1;
   font-size: large;
   padding: 14px 20px;
-    background-color: var(--keys-theme-1-red-color);
-  color: var(--txt-theme-1-white-color) !important;
 }
 .btns .e1 {
-  grid-area: 5/3/6/-1;
-  font-size: large;
-  padding: 14px 20px;
   background-color: var(--keys-theme-1-red-color);
-  color: var(--txt-theme-2-white-color) !important;
+  color: white !important;
 }
 .btns .e2 {
-  grid-area: 5/3/6/-1;
-  font-size: large;
-  padding: 14px 20px;
-background-color: var(--keys-theme-3-vivid-color);
-  /* color: var(--txt-theme-2-white-color) !important; */
+  background-color: var(--keys-theme-2-dark-orange-color);
+  color: hsl(0, 0, 100%) !important;
 }
 
-
+.btns .e3 {
+  background-color: var(--keys-theme-3-soft-color);
+  color: black !important;
+}
