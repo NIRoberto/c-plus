@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --theme-1-bg-main: hsl(222, 26%, 31%);
+  --theme-1-bg-toggle: hsl(223, 31%, 20%);
+  --theme-1-bg-screen: hsl(224, 36%, 15%);
+  --theme-2-bg-main: hsl(0, 0%, 90%);
+  --theme-2-bg-toggle: hsl(0, 5%, 81%);
+  --theme-2-bg-screen: hsl(0, 0%, 93%);
+  --theme-3-bg-main: hsl(268, 75%, 9%);
+  --theme-3-bg-toggle: hsl(268, 71%, 12%);
+  --theme-3-bg-screen: hsl(268, 71%, 12%);
+
+  --keys-theme-1-dark-Desaturated-color: hsl(225, 21%, 49%);
+  --keys-theme-1-dark-Desaturated-color: hsl(224, 28%, 35%);
+  --keys-theme-1-red-color: hsl(6, 63%, 50%);
+  --keys-theme-1-dark-red-color: hsl(6, 70%, 34%);
+  --keys-theme-1-ligth-color: hsl(30, 25%, 89%);
+  --keys-theme-1-grayish-magenta-color: hsl(28, 16%, 65%);
+
+  --txt-theme-1-very-dark-color: hsl(221, 14%, 31%);
+  --txt-theme-1-white-color: hsl(0, 0, 100%);
+
+  --keys-theme-2-dark-moderate-color: hsl(185, 42%, 37%);
+  --keys-theme-2-dark-cyne-color: hsl(185, 58%, 25%);
+  --keys-theme-2-Orange-color: hsl(25, 98%, 40%);
+  --keys-theme-2-dark-orange-color: hsl(25, 99%, 27%);
+  --keys-theme-2-light-grayshi-color: hsl(45, 7%, 89%);
+  --keys-theme-2-dark-grayshi-color: hsl(35, 11%, 61%);
+
+  --txt-theme-2-verydarkgrayshi-color: hsl(60, 10%, 19%);
+  --txt-theme-2-white-color: hsl(0, 0, 100%);
+
+  --keys-theme-3-dark-violet-color: hsl(281, 89%, 26%);
+  --keys-theme-3-vivid-color: hsl(285, 91%, 52%);
+  --keys-theme-3-pure-color: hsl(176, 100%, 44%);
+  --keys-theme-3-soft-color: hsl(177, 92%, 70%);
+  --keys-theme-3-very-color: hsl(268, 47%, 21%);
+  --keys-theme-3-dark-magenta-color: hsl(290, 70%, 36%);
+
+  --txt-theme-3-color: hsl(52, 100%, 62%);
+  --txt-theme-3-color: hsl(198, 20%, 13%);
+  --txt-theme-3-color: hsl(0, 0, 100%);
+  --number-size: 32px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  /* Family: [Spartan](https://fonts.google.com/specimen/Spartan) */
+}
+body {
+  background-color: var(--theme-1-bg-main);
+}
+/* .b1{
+    background-color: var(--theme-2-bg-main);
+
+}
+.b2{
+    background-color: var(--theme-1-bg-main);
+
+} */
+.push {
+  margin-bottom: 30px;
+}
+.main {
+  width: 400px;
+  height: 350px;
+  /* background-color: var(--theme-2-bg-screen); */
+  /* margin:90px auto ; */
+  margin: auto;
+  border-radius: 3px;
+}
+.main1 {
+}
+.main2 {
+}
+
+header {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  grid-template-rows: 1fr;
+  /* border:1px solid  red; */
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+/* header span{
+ color: var(--txt-theme-2-white-color)  !important;
+}
+.h2{
+
+} */
+span {
+  font-size: small;
+}
+
+.title span {
+  font-size: x-large;
+}
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+.theme {
+  grid-area: 1/1/3/2;
+  text-align: center;
+}
+.num {
+  grid-area: 1/2/2/-1;
+  text-align: center;
+}
+.num span {
+  padding-right: 4px;
+}
+.move {
+  grid-area: 2/2/-1/-1;
+  margin-left: 2px;
+  margin-top: 5px;
+  background-color: grey;
+  width: 40px;
+  height: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.move::after {
+  content: "";
+  background-color: yellow;
+  border-radius: 50%;
+  width: 10px;
+  /* align-items: flex-end;
+ */
+  cursor: pointer;
+  margin-left: 16px;
+  margin-top: 2px;
+  display: flex;
+  height: 10px;
+  z-index: 5;
+}
+
+.main div input {
+  width: 100%;
+  border: none;
+  margin: 25px 0px;
+  outline: none;
+  height: 100px;
+  border-radius: 10px;
+}
+.main div .input-1 {
+  background-color: var(--theme-1-bg-toggle);
+}
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(--theme-1-bg-toggle);
+}
+
+.btns button {
+    outline: none;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 6px 9px;
+    font-size: var(--number-size);
+}
+
+.btn1 button {
+box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);
+    
+}
+.btn2 button {
+box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);
+    
+}
+.btn3 button {
+box-shadow: 0px 8px 15px var(--txt-theme-2-white-color);  
+}
+.btns .reset {
+  grid-area: 5/1/6/3;
+  font-size: large;
+  padding: 14px 20px;
+  background-color: var(--keys-theme-3-vivid-color);
+}
+
+.btns .equal {
+  grid-area: 5/3/6/-1;
+  font-size: large;
+  padding: 14px 20px;
+}
+.btns .reset1 {
+  grid-area: 5/1/6/3;
+  font-size: large;
+  padding: 14px 20px;
+  background-color: var(--theme-1-bg-main) !important;
+  color: var(--txt-theme-1-white-color) !important;
+}
+
+.btns .equal {
+  grid-area: 5/3/6/-1;
+  font-size: large;
+  padding: 14px 20px;
+    background-color: var(--keys-theme-1-red-color);
+  color: var(--txt-theme-1-white-color) !important;
+}
+.btns .e1 {
+  grid-area: 5/3/6/-1;
+  font-size: large;
+  padding: 14px 20px;
+  background-color: var(--keys-theme-1-red-color);
+  color: var(--txt-theme-2-white-color) !important;
+}
+.btns .e2 {
+  grid-area: 5/3/6/-1;
+  font-size: large;
+  padding: 14px 20px;
+background-color: var(--keys-theme-3-vivid-color);
+  /* color: var(--txt-theme-2-white-color) !important; */
+}
+
+
