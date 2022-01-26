@@ -200,10 +200,10 @@ prod.addEventListener("click", () => {
 });
 let equal = document.querySelector('.equal');
 equal.addEventListener('click', () => {
-  console.log(inPut.join(''));
   document.querySelector("input").value = eval(inPut.join(""));
-  // inPut.splice(0);
+  inPut.splice(0);
   inPut.push(eval(inPut.join("")));
+  console.log(inPut);
 })
 let reset = document.querySelector(".reset");
 reset.addEventListener("click", () => {
