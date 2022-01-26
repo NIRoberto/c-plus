@@ -70,6 +70,13 @@
   margin: auto;
   border-radius: 3px;
 }
+@media(max-width:600px){
+ .main {
+  width: 90%;
+  height: 100%;
+}
+
+}
 header {
   display: grid;
   grid-template-columns: 70% 1fr;
