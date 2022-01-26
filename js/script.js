@@ -1,8 +1,8 @@
+'use  strict'
 const toggle1 = document.querySelector("#toggle1");
 const toggle2 = document.querySelector("#toggle2");
 const toggle3 = document.querySelector("#toggle3");
 
-console.log(toggle1, toggle2, toggle3);
 
 toggle1.addEventListener("click", (e) => {
   document.querySelector(".move").classList.add("move1");
@@ -89,3 +89,130 @@ toggle3.addEventListener("click", (e) => {
     arr[i].classList.remove("t2", "t1");
   }
 });
+
+let inPut = [];
+
+let seven = document.querySelector(".seven");
+seven.addEventListener("click", () => {
+  inPut.push(7);
+  console.log(inPut);
+  document.querySelector("input").value = `${inPut.join('')}`;
+});
+
+let six = document.querySelector(".six");
+six.addEventListener("click", () => {
+  inPut.push(6);
+  console.log(inPut);
+  document.querySelector("input").value = `${inPut.join("")}`;
+  // inPut.push(7);
+  // console.log(inPut);
+});
+
+let five = document.querySelector(".five");
+five.addEventListener("click", () => {
+inPut.push(5);
+  console.log(inPut);
+  document.querySelector("input").value = `${inPut.join('')}`;
+});
+
+let dot = document.querySelector('.dot');
+dot.addEventListener('click', () => {
+  inPut.push('.');
+  console.log(inPut);
+  document.querySelector("input").value = `${inPut.join("")}`;
+})
+let nine = document.querySelector(".nine");
+nine.addEventListener("click", () => {
+inPut.push(9);
+console.log(inPut);
+document.querySelector("input").value = `${inPut.join("")}`;
+
+});
+
+let zero = document.querySelector(".zero");
+zero.addEventListener("click", () => {
+ inPut.push(0);
+ console.log(inPut);
+ document.querySelector("input").value = `${inPut.join("")}`;
+
+});
+
+let four = document.querySelector(".four");
+four.addEventListener("click", () => {
+  inPut.push(4);
+  console.log(inPut);
+  document.querySelector("input").value = `${inPut.join("")}`;
+
+});
+
+let three = document.querySelector(".three");
+three.addEventListener("click", () => {
+ inPut.push(3);
+ console.log(inPut);
+ document.querySelector("input").value = `${inPut.join("")}`;
+ 
+});
+
+let one = document.querySelector(".one");
+one.addEventListener("click", () => {
+  inPut.push(1);
+  console.log(inPut);
+  document.querySelector("input").value = `${inPut.join("")}`;
+
+});
+
+let two = document.querySelector(".two");
+two.addEventListener("click", () => {
+ inPut.push(2);
+ console.log(inPut);
+ document.querySelector("input").value = `${inPut.join("")}`;
+
+});
+
+let eigth = document.querySelector(".eigth");
+  eigth.addEventListener("click", () => {
+ inPut.push(8);
+ console.log(inPut);
+ document.querySelector("input").value = `${inPut.join("")}`;
+
+});
+
+let add = document.querySelector(".add");
+add.addEventListener("click", () => {
+  inPut.push('+');
+  document.querySelector("input").value = `${inPut.join('')}`;
+});
+let div = document.querySelector(".division");
+div.addEventListener("click", () => {
+  inPut.push("/");
+  document.querySelector("input").value = `${inPut.join("")}`;
+});
+let subu = document.querySelector(".sub");
+subu.addEventListener("click", () => {
+  inPut.push('-');
+  document.querySelector("input").value = `${inPut.join('')}`;
+
+});
+let prod = document.querySelector(".product");
+prod.addEventListener("click", () => {
+  inPut.push('*');
+  document.querySelector("input").value = `${inPut.join('')}`;
+});
+let equal = document.querySelector('.equal');
+equal.addEventListener('click', () => {
+  document.querySelector("input").value = eval(inPut.join(""));
+  inPut.splice(0);
+  inPut.push(eval(inPut.join("")));
+  console.log(inPut);
+})
+let reset = document.querySelector(".reset");
+reset.addEventListener("click", () => {
+  inPut.splice(0);
+  document.querySelector("input").value = "";
+});
+let del = document.querySelector('.d');
+del.addEventListener('click', () => {
+  inPut.pop();
+  document.querySelector("input").value = `${inPut.join("")}`;
+
+})
